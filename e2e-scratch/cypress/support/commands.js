@@ -1,5 +1,5 @@
 Cypress.Commands.add('fillSignupForm', (email, password) => {
-    cy.intercept('GET', '**/notes').as('getNotes')
+    cy.intercept('GET','**/notes').as('getNotes')
     cy.visit('/signup')
     cy.get('#email').type(email)
     cy.get('#password').type(password, {log: false})
